@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.title {
+  margin: 20px 0;
+}
+
+.gameBoard {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  &.empty {
+    background-color: transparent;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+
+.shuffleButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .tile {
+    background-color: #2980b9;
+  }
+
+  .shuffleButton {
+    background-color: #2980b9;
+  }
+}
+
+.congratsMessage {
+  margin: 20px 0;
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+  
+  h2 {
+    color: #27ae60;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+}
+
+.completed {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
