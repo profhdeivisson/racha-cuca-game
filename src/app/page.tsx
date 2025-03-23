@@ -55,12 +55,6 @@ export default function Home() {
     setIsCompleted(false);
   }
 
-  // Remove the setTimeout approach since we're shuffling before setting state
-  function createBoard() {
-    // This function can be removed or kept as a backup
-    initializeGame();
-  }
-
   function moveTile(index: number) {
     if (isCompleted) return; // Impede movimentos após completar
     
