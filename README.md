@@ -5,7 +5,7 @@ Um jogo de quebra-cabeça deslizante (também conhecido como "Racha Cuca") desen
 ## Demonstração
 
 Você pode experimentar o jogo online aqui:
-[Link para o deploy](#) <!-- Adicione seu link de deploy aqui -->
+[Link para o deploy](#) https://racha-cuca-game.vercel.app
 
 ## Funcionalidades
 

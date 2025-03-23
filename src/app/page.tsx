@@ -10,11 +10,9 @@ export default function Home() {
   const [isCompleted, setIsCompleted] = useState(false);
 
   useEffect(() => {
-    // Initialize the board and shuffle it immediately
     initializeGame();
   }, []);
 
-  // Verifica se o quebra-cabeça está completo
   useEffect(() => {
     if (tiles.length === 0) return;
     
@@ -27,13 +25,10 @@ export default function Home() {
     }
   }, [tiles, isCompleted]);
 
-  // Initialize game with shuffled board
   function initializeGame() {
-    // Create a shuffled board directly instead of creating ordered then shuffling
     const newTiles: (number | null)[] = Array.from({ length: 15 }, (_, i) => i + 1);
     newTiles.push(null);
     
-    // Shuffle the tiles before setting state
     let currentEmptyIndex = 15;
     
     for (let i = 0; i < 100; i++) {
@@ -49,14 +44,13 @@ export default function Home() {
       currentEmptyIndex = randomIndex;
     }
     
-    // Set state only after shuffling
     setTiles(newTiles);
     setEmptyIndex(currentEmptyIndex);
     setIsCompleted(false);
   }
 
   function moveTile(index: number) {
-    if (isCompleted) return; // Impede movimentos após completar
+    if (isCompleted) return;
     
     const possibleMoves = [
       emptyIndex - 4,
@@ -73,7 +67,6 @@ export default function Home() {
     }
   }
 
-  // Função para disparar o efeito de confete
   function triggerConfetti() {
     confetti({
       particleCount: 200,
@@ -89,7 +82,6 @@ export default function Home() {
   }
 
   function shuffleBoard() {
-    // Reset completion state when shuffling
     setIsCompleted(false);
     
     let currentEmptyIndex = emptyIndex;
