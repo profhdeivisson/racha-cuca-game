@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quebra-Cabeça Deslizante
 
-## Getting Started
+Um jogo de quebra-cabeça deslizante (também conhecido como "Racha Cuca") desenvolvido com Next.js e React. O objetivo é organizar os números em ordem crescente movendo as peças para o espaço vazio.
 
-First, run the development server:
+## Demonstração
+
+Você pode experimentar o jogo online aqui:
+[Link para o deploy](#) <!-- Adicione seu link de deploy aqui -->
+
+## Funcionalidades
+
+- Tabuleiro 4x4 com 15 peças numeradas
+- Movimentação de peças com validação de movimentos
+- Embaralhamento automático do tabuleiro
+- Detecção automática de vitória
+- Animação e efeitos visuais de comemoração quando o quebra-cabeça é resolvido
+
+## Como Jogar
+
+1. Clique nas peças adjacentes ao espaço vazio para movê-las
+2. Organize os números em ordem crescente (1-15) com o espaço vazio no canto inferior direito
+3. Quando completar o quebra-cabeça, uma mensagem de parabéns será exibida
+4. Clique em "Embaralhar" a qualquer momento para reiniciar o jogo
+
+## Tecnologias Utilizadas
+
+- Next.js
+- React
+- TypeScript
+- SCSS Modules
+- Canvas Confetti (para efeitos de comemoração)
+
+## Executando Localmente
+
+- Precisa ter o Node.js instalado na versão 22.1.0 ou superior.
+
+Primeiro, clone o repositório e instale as dependências:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/profhdeivisson/racha-cuca-game
+cd racha-cuca-game
+npm install
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
