@@ -11,6 +11,14 @@
   margin: 20px 0;
 }
 
+.moveCounter {
+  align-self: center;
+  position: relative;
+  left: -115px;
+  font-size: 16px;
+  color: var(--foreground);
+}
+
 .gameBoard {
   display: grid;
   grid-template-columns: repeat(4, 80px);
@@ -53,6 +61,15 @@
 
   &:hover {
     opacity: 0.9;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #95a5a6;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 
